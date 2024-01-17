@@ -18,8 +18,11 @@ return new class extends Migration
             $table->integer('is_admin')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger('refer_id');
+            $table->foreign('refer_id')->references('id')->on('refers')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
