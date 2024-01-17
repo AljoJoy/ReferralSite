@@ -19,6 +19,8 @@ https://docs.github.com/en/get-started/quickstart/set-up-git
 
 Go to C:\xampp\htdocs (htdocs folder of xaamp in your system)
 open a terminal in that path
+run this command there
+git clone https://github.com/AljoJoy/ReferralSite.git
 
 
 
