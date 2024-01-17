@@ -9,6 +9,9 @@ open and run the executable file to install XAAMP on your system.
 After successfull completion run the XAAMP control panel and start Apache server and MySQL services.
 click on admin button which is in the same row of MySql and open phpmyadmin. click new button on left side and insert referral_site on create database form and hit create button. 
 
+Install Nodejs
+https://nodejs.org/en/download
+
 Install Composer from below link.
 https://getcomposer.org/download/
 
@@ -29,3 +32,7 @@ now update .env file with database credentials
 Then run this command.
 php artisan migrate
 php artisan app:add-admin --email --password
+
+open a new terminal and run following commands
+npm install
+npm run dev
