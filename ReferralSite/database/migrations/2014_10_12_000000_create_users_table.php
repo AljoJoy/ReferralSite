@@ -15,11 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('is_admin')->nullable();
+            $table->integer('is_admin')->default(0);
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->unsignedBigInteger('refer_id');
-            $table->foreign('refer_id')->references('id')->on('refers')->onDelete('cascade');
+            $table->string('password');            
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

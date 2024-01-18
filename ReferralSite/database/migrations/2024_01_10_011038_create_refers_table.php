@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('refers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('refer_id');
+            $table->foreign('refer_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('referral_text')->nullable();
-            $table->integer('level')->nullable();
+            $table->integer('level')->default(10);
             $table->bigInteger('points')->default(0);
             $table->timestamps();
             $table->softDeletes();
